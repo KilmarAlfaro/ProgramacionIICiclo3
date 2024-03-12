@@ -7,13 +7,59 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tienda en linea"
+        android:background="@color/design_default_color_primary"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/txtTienda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENEBA"
+        android:layout_below="@+id/txtTitle"
+        android:textAlignment="center"
+        android:textSize="30dp"/>
+
+
+
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello world!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/txtTienda"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        tools:srcCompat="@tools:sample/avatars" />
+    <Button
+        android:id="@+id/btnAñadircarrito1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir al carrito"
+        android:layout_below="@id/imageView1"/>
+
+AA
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTienda"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        tools:srcCompat="@tools:sample/avatars" />
+    <Button
+        android:id="@+id/btnAñadircarrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir al carrito"
+        android:layout_below="@id/imageView2"
+        android:layout_alignParentEnd="true" />
+
 
 
 </RelativeLayout>
