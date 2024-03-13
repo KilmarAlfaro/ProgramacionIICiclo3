@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Tienda en Linea</string>
+    <string-array name="spnvalo">
+        <item>Nada</item>
+        <item>600 Valorant Points $6.99</item>
+        <item>1200 Valorant Points $11.99</item>
+        <item>2500 Valorant Points $26.99</item>
+        <item>5000 Valorant Points $50.99</item>
+    </string-array>
 </resources>
 
