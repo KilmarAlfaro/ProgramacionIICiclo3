@@ -63,6 +63,9 @@ public class lista_amigos extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         try{
+            if(item.getItemId()==R.id.mnxModificar){
+
+            }
             switch (item.getItemId()){
                 case R.id.mnxAgregar:
                     paramatros.putString("accion", "nuevo");
