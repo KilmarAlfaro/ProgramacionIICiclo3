@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spnvaloo">
+        <item>Seleccione un producto</item>
+        <item>600 Valorant Points $6.99</item>
+        <item>1200 Valorant Points $11.99</item>
+        <item>2500 Valorant Points $26.99</item>
+        <item>5000 Valorant Points $50.99</item>
+    </string-array>
+</resources>

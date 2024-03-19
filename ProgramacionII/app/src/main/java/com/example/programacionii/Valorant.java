@@ -2,14 +2,17 @@ package com.example.programacionii;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.os.Message;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 public class Valorant extends AppCompatActivity{
     Button btnValo;
+    Button btnIncio;
     Spinner spnValorant;
     Button btnCarrito;
 
@@ -22,9 +25,9 @@ public class Valorant extends AppCompatActivity{
         btnValo = findViewById(R.id.btnValo);
         btnValo.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                switch (spnValorant.getSelectedItemPosition()){
+                switch (spnValorant.getSelectedItemPosition()) {
                     case 0:
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
                         break;
@@ -40,9 +43,17 @@ public class Valorant extends AppCompatActivity{
                     case 4:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 5000 Valorant Points ($50.99)", Toast.LENGTH_LONG).show();
                         break;
-
                 }
 
+            }
+        });
+
+        btnIncio = findViewById(R.id.btnInicio);
+        btnIncio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Valorant.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
