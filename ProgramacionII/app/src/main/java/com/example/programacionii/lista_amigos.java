@@ -63,33 +63,35 @@ public class lista_amigos extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         try{
-            if(item.getItemId()==R.id.mnxModificar){
+
+            if (item.getItemId()==R.id.mnxAgregar){
+                paramatros.putString("accion", "nuevo");
+                abrirActividad(paramatros);
 
             }
-            switch (item.getItemId()){
-                case R.id.mnxAgregar:
-                    paramatros.putString("accion", "nuevo");
-                    abrirActividad(paramatros);
-                    break;
-                case R.id.mnxModificar:
-                    String[] amigos = {
-                            cAmigos.getString(0), //idAmigo
-                            cAmigos.getString(1), //nombre
-                            cAmigos.getString(2), //direccion
-                            cAmigos.getString(3), //telefono
-                            cAmigos.getString(4), //email
-                            cAmigos.getString(5), //dui
-                            cAmigos.getString(6), //foto
-                    };
-                    paramatros.putString("accion", "modificar");
-                    paramatros.putStringArray("amigos", amigos);
-                    abrirActividad(paramatros);
-                    break;
-                case R.id.mnxEliminar:
-                    eliminarAmigo();
-                    break;
+            if (item.getItemId()==R.id.mnxModificar){
+                String[] amigos = {
+                        cAmigos.getString(0), //idAmigo
+                        cAmigos.getString(1), //nombre
+                        cAmigos.getString(2), //direccion
+                        cAmigos.getString(3), //telefono
+                        cAmigos.getString(4), //email
+                        cAmigos.getString(5), //dui
+                        cAmigos.getString(6), //foto
+                };
+                paramatros.putString("accion", "modificar");
+                paramatros.putStringArray("amigos", amigos);
+                abrirActividad(paramatros);
             }
+
+            if (item.getItemId()==R.id.mnxEliminar){
+                eliminarAmigo();
+
+            }
+
+
             return true;
+
         }catch (Exception e){
             mostrarMsg("Error al seleccionar el item: "+ e.getMessage());
             return super.onContextItemSelected(item);
