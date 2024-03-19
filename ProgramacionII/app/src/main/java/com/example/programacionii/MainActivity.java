@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     Button btnVal1;
     Button btnFort;
 
-    Intent intent;
 
 
 
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Valorant.class);
                 startActivity(intent);
+
 
             }
         });
