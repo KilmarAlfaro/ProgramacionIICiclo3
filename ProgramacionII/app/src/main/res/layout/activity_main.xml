@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#0C87B2">
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Tienda en linea."
+        android:text="Tienda en linea|CarDieKil"
         android:background="@color/design_default_color_primary"
         android:textSize="30dp"
         android:textColor="@color/white"/>
@@ -35,7 +35,7 @@
         android:textSize="30dp"
         android:text="Bienvenid@, se encuentra en la pagina de inicio.\n\n¿Qué desea comprar?"
         android:layout_below="@id/txtTitle"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/btnVal1"
@@ -45,28 +45,33 @@
         android:layout_height="wrap_content"
         android:text="VALORANT POINTS"
         android:textSize="25dp"
-        android:backgroundTint="#CC0000"/>
+        android:backgroundTint="#00FFFB"
+        android:layout_marginHorizontal="10dp"
+        android:fontFamily="sans-serif-black"/>
 
     <Button
         android:id="@+id/btnFort"
         android:layout_below="@id/btnVal1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="FORTNITE V-BUCKS"
         android:textSize="25dp"
-        android:backgroundTint="#CC0000"/>
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="#00FFFB"
+        android:fontFamily="sans-serif-black"/>
 
     <Button
         android:id="@+id/btnCallduty"
         android:layout_below="@id/btnFort"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="COD POINTS"
         android:textSize="25dp"
-        android:backgroundTint="#CC0000"/>
-
+        android:layout_marginHorizontal="10dp"
+        android:backgroundTint="#00FFFB"
+        android:fontFamily="sans-serif-black"/>
 
 
 

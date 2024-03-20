@@ -23,6 +23,8 @@ public class Valorant extends AppCompatActivity{
         setContentView(R.layout.valorant);
         spnValorant = findViewById(R.id.spnValorant);
         btnValo = findViewById(R.id.btnValo);
+
+
         btnValo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +49,7 @@ public class Valorant extends AppCompatActivity{
 
             }
         });
+
 
         btnIncio = findViewById(R.id.btnInicio);
         btnIncio.setOnClickListener(new View.OnClickListener() {
