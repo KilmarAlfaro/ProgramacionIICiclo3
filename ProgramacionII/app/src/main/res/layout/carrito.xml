@@ -30,25 +30,25 @@
         android:fontFamily="sans-serif-black"
         android:background="#383F39" />
 
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="530dp"
-       android:background="@color/white"
-       android:layout_marginHorizontal="20dp"
-       android:layout_below="@id/txtCarrito">
-       <TextView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_below="@id/txtCarrito"
-           android:text="LISTA DE PRODUCTOS"
-           android:layout_marginStart="5dp"
-           android:textColor="@color/black"
-           android:fontFamily="sans-serif-black"/>
-           <ListView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="15dp" />
-   </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:background="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/txtCarrito">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCarrito"
+            android:text="LISTA DE PRODUCTOS"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp" />
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btnInicio"
@@ -70,7 +70,5 @@
         android:textSize="30sp"
         android:backgroundTint="#FF0000"
         android:fontFamily="sans-serif-black"/>
-
-
 
 </RelativeLayout>

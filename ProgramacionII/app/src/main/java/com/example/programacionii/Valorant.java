@@ -61,7 +61,15 @@ public class Valorant extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+        fabCarrito.findViewById(R.id.fabCarrito);
 
+        fabCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Valorant.this, Carrito.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
