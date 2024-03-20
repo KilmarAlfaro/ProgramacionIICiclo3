@@ -28,7 +28,7 @@
         android:textColor="@color/white"
         android:layout_marginHorizontal="20dp"
         android:fontFamily="sans-serif-black"
-        android:background="#9FA2A2" />
+        android:background="#383F39" />
 
    <androidx.cardview.widget.CardView
        android:layout_width="match_parent"
@@ -50,7 +50,26 @@
                android:layout_marginTop="15dp" />
    </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/btnInicio"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:text="Volver a inicio"
+        android:textSize="23sp"
+        android:backgroundTint="#07BD17"
+        android:fontFamily="sans-serif-black"/>
 
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Pagar"
+        android:textSize="30sp"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="sans-serif-black"/>
 
 
 

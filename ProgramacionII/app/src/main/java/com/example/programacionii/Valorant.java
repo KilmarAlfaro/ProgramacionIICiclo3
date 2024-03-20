@@ -10,12 +10,14 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Valorant extends AppCompatActivity{
     Button btnValo;
     Button btnIncio;
     Spinner spnValorant;
     Button btnCarrito;
-
+    FloatingActionButton fabCarrito;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +61,6 @@ public class Valorant extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
-
 
 
     }
