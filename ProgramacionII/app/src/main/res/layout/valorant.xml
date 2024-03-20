@@ -11,7 +11,7 @@
         android:id="@+id/txtTitle"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Tienda en linea."
+        android:text="Tienda en linea|CarDieKil"
         android:background="@color/white"
         android:textSize="30dp"
         android:textColor="@color/black"/>
