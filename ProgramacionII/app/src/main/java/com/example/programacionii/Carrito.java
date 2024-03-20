@@ -14,17 +14,16 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Carrito extends AppCompatActivity {
 
-Button btnIncio;
+Button btnInicio3;
 Button btnPagar;
-FloatingActionButton fabCarrito;
 
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carrito);
-        btnIncio.findViewById(R.id.btnInicio);
-        btnIncio.setOnClickListener(new View.OnClickListener() {
+        btnInicio3 = findViewById(R.id.btnInicio3);
+        btnInicio3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Carrito.this, MainActivity.class);
@@ -32,8 +31,6 @@ FloatingActionButton fabCarrito;
             }
         });
 
+
     }
-
-
-
 }

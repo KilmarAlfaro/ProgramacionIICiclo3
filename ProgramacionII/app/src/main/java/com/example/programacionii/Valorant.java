@@ -10,11 +10,12 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Valorant extends AppCompatActivity{
     Button btnValo;
-    Button btnIncio;
+    Button btnInicio;
     Spinner spnValorant;
     Button btnCarrito;
     FloatingActionButton fabCarrito;
@@ -25,6 +26,7 @@ public class Valorant extends AppCompatActivity{
         setContentView(R.layout.valorant);
         spnValorant = findViewById(R.id.spnValorant);
         btnValo = findViewById(R.id.btnValo);
+        fabCarrito = findViewById(R.id.fabCarrito);
 
 
         btnValo.setOnClickListener(new View.OnClickListener() {
@@ -53,15 +55,14 @@ public class Valorant extends AppCompatActivity{
         });
 
 
-        btnIncio = findViewById(R.id.btnInicio);
-        btnIncio.setOnClickListener(new View.OnClickListener() {
+        btnInicio = findViewById(R.id.btnInicio);
+        btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Valorant.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-        fabCarrito.findViewById(R.id.fabCarrito);
 
         fabCarrito.setOnClickListener(new View.OnClickListener() {
             @Override

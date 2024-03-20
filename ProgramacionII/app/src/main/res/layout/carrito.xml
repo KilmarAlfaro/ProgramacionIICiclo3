@@ -13,7 +13,7 @@
         android:layout_height="60dp"
         android:text="Tienda en linea|CarDieKil"
         android:background="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/black"
         android:textAlignment="center"/>
 
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CARRITO"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textAlignment="center"
         android:layout_below="@id/txtTitle2"
         android:textColor="@color/white"
@@ -51,14 +51,14 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/btnInicio"
+        android:id="@+id/btnInicio3"
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:text="Volver a inicio"
-        android:textSize="23sp"
         android:backgroundTint="#07BD17"
-        android:fontFamily="sans-serif-black"/>
+        android:fontFamily="sans-serif-black"
+        android:text="Volver a inicio"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/btnPagar"

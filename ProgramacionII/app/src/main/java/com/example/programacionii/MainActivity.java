@@ -9,6 +9,8 @@ import android.os.Bundle;
 //import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 // import android.widget.Spinner;
 // import android.widget.TextView;
 // import android.widget.Toast;
@@ -19,6 +21,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     Button btnVal1;
     Button btnFort;
+    FloatingActionButton fabCarrito;
 
 
 
@@ -31,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnVal1 = findViewById(R.id.btnVal1);
         btnFort = findViewById(R.id.btnFort);
+        fabCarrito = findViewById(R.id.fabCarrito);
+
         btnVal1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
 
+            }
+        });
+        fabCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Carrito.class);
+                startActivity(intent);
             }
         });
 
