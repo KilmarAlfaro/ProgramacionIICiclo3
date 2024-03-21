@@ -3,9 +3,21 @@
 
     <string-array name="spnvaloo">
         <item>Seleccione un producto</item>
-        <item>600 Valorant Points $6.99</item>
-        <item>1200 Valorant Points $11.99</item>
-        <item>2500 Valorant Points $26.99</item>
-        <item>5000 Valorant Points $50.99</item>
+        <item>500 Valorant Points $4.99</item>
+        <item>1,000 Valorant Points $9.99</item>
+        <item>2,050 Valorant Points $19..99</item>
+        <item>3,650 Valorant Points $34.99</item>
+        <item>5,350 Valorant Points $49.99</item>
+        <item>11,000 Valorant Points $99.99</item>
+    </string-array>
+
+    <string-array name="spnFort">
+        <item>Seleccione un producto</item>
+        <item>1,000 V-BUCKS $8.99</item>
+        <item>2,800 V-BUCKS $19.99</item>
+        <item>5,000 V-BUCKS $31.99</item>
+        <item>13,500 V-BUCKS $79.99</item>
+
+
     </string-array>
 </resources>

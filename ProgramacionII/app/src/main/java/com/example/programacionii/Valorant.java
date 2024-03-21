@@ -38,17 +38,24 @@ public class Valorant extends AppCompatActivity{
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
                         break;
                     case 1:
-                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 600 Valorant Points ($6.99)", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 500 Valorant Points ($4.99)", Toast.LENGTH_LONG).show();
                         break;
                     case 2:
-                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1200 Valorant Points ($11.99)", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1,000 Valorant Points ($9.99)", Toast.LENGTH_LONG).show();
                         break;
                     case 3:
-                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 2500 Valorant Points ($26.99)", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 2,050 Valorant Points ($19..99)", Toast.LENGTH_LONG).show();
                         break;
                     case 4:
-                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 5000 Valorant Points ($50.99)", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 3,650 Valorant Points ($34.99)", Toast.LENGTH_LONG).show();
                         break;
+                    case 5:
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 5,350 Valorant Points ($49.99)", Toast.LENGTH_LONG).show();
+                        break;
+                    case 6:
+                        Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 11,000 Valorant Points ($99.99)", Toast.LENGTH_LONG).show();
+                        break;
+
                 }
 
             }

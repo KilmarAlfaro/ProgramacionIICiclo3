@@ -30,31 +30,32 @@
 
 
     <TextView
-        android:id="@+id/lblValorant"
+        android:id="@+id/txtFortnite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/txtTitle"
-        android:text="VALORANT POINTS"
+        android:text="FORTNITE V-BUCKS"
         android:textColor="@color/white"
         android:textSize="45dp"
         android:textAlignment="center"
         android:layout_marginTop="10dp"        />
 
+
     <ImageView
-        android:id="@+id/points"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/valo_points"
-        android:layout_below="@id/lblValorant"
-        android:layout_marginStart="140dp"/>
+        android:id="@+id/imgPavos"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/txtFortnite"
+        android:layout_marginStart="130dp"
+        app:srcCompat="@drawable/pavos_fortnite" />
 
 
     <Spinner
-        android:id="@+id/spnValorant"
-        android:entries="@array/spnvaloo"
+        android:id="@+id/spnFortnite"
+        android:entries="@array/spnFort"
         android:layout_width="250dp"
         android:layout_height="48dp"
-        android:layout_below="@id/points"
+        android:layout_below="@id/imgPavos"
         android:layout_marginStart="75dp"
         android:background="#30DACB"
         android:layout_marginTop="30dp" />
@@ -64,12 +65,12 @@
 
 
     <Button
-        android:id="@+id/btnValo"
+        android:id="@+id/btnFort"
         android:layout_width="250dp"
         android:drawableTint="@color/white"
         android:layout_height="60dp"
         android:text="Añadir al carrito"
-        android:layout_below="@id/spnValorant"
+        android:layout_below="@id/spnFortnite"
         android:layout_marginStart="75dp"
         android:layout_marginTop="30dp"
         android:textSize="20sp"
@@ -86,4 +87,6 @@
         android:text="Volver a inicio"
         android:textSize="20sp"
         android:backgroundTint="#0000FF" />
+
+
 </RelativeLayout>

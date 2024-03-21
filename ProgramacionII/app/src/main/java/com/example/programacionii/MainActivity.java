@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnFort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Fortnite.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }
