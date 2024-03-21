@@ -1,5 +1,6 @@
 package com.example.programacionii;
 
+import android.content.Context;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Intent;
@@ -18,42 +19,16 @@ import java.util.ArrayList;
 
 public class Carrito extends AppCompatActivity {
 
-Button btnInicio3;
-Button btnPagar;
-ListView listView;
-String seleccion;
-
+    Button btnInicio3;
+    Button btnPagar;
+    ListView listView;
+    String seleccion;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carrito);
         listView = findViewById(R.id.listView);
-        String seleccion = getIntent().getStringExtra("seleccion");
-
-        ArrayList<String> obtenerItems;
-
-
-        listView.setAdapter(adapter);
-
-        (String seleccion){
-            ArrayList<String> items;
-            items = new ArrayList<>();
-
-            switch (seleccion) {
-                case "Opción 1":
-                    items.add("1000 V-BUCKS");
-                    items.add("Elemento 2");
-                    break;
-                case "Opción 2":
-                    items.add("Elemento 3");
-                    items.add("Elemento 4");
-                    break;
-                // Agrega más casos según sea necesario
-            }
-            return items;
-        }
-
         btnInicio3 = findViewById(R.id.btnInicio3);
 
         btnInicio3.setOnClickListener(new View.OnClickListener() {
@@ -64,10 +39,6 @@ String seleccion;
             }
         });
 
-
-    }
-
-    private Object obtenerItems(String seleccion) {
 
     }
 }

@@ -36,11 +36,7 @@ Spinner spnFortnite;
                 switch (spnFortnite.getSelectedItemPosition()) {
                     case 0:
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
-                        String seleccion = spnFortnite.getSelectedItem().toString();
-                        Intent intent = new Intent(Fortnite.this, Carrito.class);
-                        intent.putExtra("seleccion", seleccion);
 
-                        startActivity(intent);
                         break;
                     case 1:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1,000 V-BUCKS ($8.99)", Toast.LENGTH_LONG).show();
