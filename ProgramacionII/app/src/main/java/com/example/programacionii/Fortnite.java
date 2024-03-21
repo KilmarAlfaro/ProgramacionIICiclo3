@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.os.Message;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -16,6 +17,8 @@ Button btnInicio;
 Button btnFort;
 FloatingActionButton fabCarrito;
 Spinner spnFortnite;
+ListView listView;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fortnite);
@@ -23,12 +26,14 @@ Spinner spnFortnite;
         btnInicio= findViewById(R.id.btnInicio);
         spnFortnite = findViewById(R.id.spnFortnite);
         btnFort = findViewById(R.id.btnFort);
+
         btnFort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (spnFortnite.getSelectedItemPosition()) {
                     case 0:
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
+
                         break;
                     case 1:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1,000 V-BUCKS ($8.99)", Toast.LENGTH_LONG).show();
@@ -60,6 +65,10 @@ Spinner spnFortnite;
                 startActivity(intent);
             }
         });
+        setContentView(R.layout.carrito);
+        listView = findViewById(R.id.listView);
 
     }
+
+
 }

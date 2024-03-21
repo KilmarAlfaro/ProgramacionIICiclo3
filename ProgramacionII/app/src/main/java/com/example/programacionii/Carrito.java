@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.os.Message;
 
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +17,14 @@ public class Carrito extends AppCompatActivity {
 
 Button btnInicio3;
 Button btnPagar;
+ListView listView;
 
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.carrito);
+        listView = findViewById(R.id.listView);
         btnInicio3 = findViewById(R.id.btnInicio3);
         btnInicio3.setOnClickListener(new View.OnClickListener() {
             @Override
