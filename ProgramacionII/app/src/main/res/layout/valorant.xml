@@ -12,9 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Tienda en linea|CarDieKil"
-        android:background="@color/white"
+        android:background="#E10FE5"
         android:textSize="30dp"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:contentDescription="aaa"
         android:id="@+id/fabCarrito"
