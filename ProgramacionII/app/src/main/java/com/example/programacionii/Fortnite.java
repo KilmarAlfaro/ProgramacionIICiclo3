@@ -53,6 +53,13 @@ Spinner spnFortnite;
                 startActivity(intent);
             }
         });
+        fabCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Fortnite.this, Carrito.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
