@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Tienda en linea|CarDieKil"
-        android:background="@color/white"
+        android:background="#E10FE5"
         android:textSize="30sp"
         android:textColor="@color/black"
         android:textAlignment="center"/>
@@ -28,7 +28,7 @@
         android:textColor="@color/white"
         android:layout_marginHorizontal="20dp"
         android:fontFamily="sans-serif-black"
-        android:background="#383F39" />
+        android:background="#0FE2E5" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -56,7 +56,7 @@
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#07BD17"
+        android:backgroundTint="#0000FF"
         android:fontFamily="sans-serif-black"
         android:text="Volver a inicio"
         android:textSize="20sp"/>

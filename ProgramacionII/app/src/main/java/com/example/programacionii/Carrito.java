@@ -1,6 +1,7 @@
 package com.example.programacionii;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.content.Intent;
@@ -22,7 +23,6 @@ public class Carrito extends AppCompatActivity {
     Button btnInicio3;
     Button btnPagar;
     ListView listView;
-    String seleccion;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,8 @@ public class Carrito extends AppCompatActivity {
         setContentView(R.layout.carrito);
         listView = findViewById(R.id.listView);
         btnInicio3 = findViewById(R.id.btnInicio3);
+
+
 
         btnInicio3.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@ package com.example.programacionii;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.os.Message;
@@ -40,7 +41,6 @@ Spinner spnFortnite;
                         break;
                     case 1:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1,000 V-BUCKS ($8.99)", Toast.LENGTH_LONG).show();
-
                         break;
                     case 2:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 2,800 V-BUCKS ($19.99)", Toast.LENGTH_LONG).show();
@@ -54,6 +54,7 @@ Spinner spnFortnite;
                 }
             }
         });
+
 
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
