@@ -1,11 +1,11 @@
 package com.example.programacionii;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.os.Message;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -15,29 +15,41 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Fortnite extends AppCompatActivity{
-Button btnInicio;
-Button btnFort;
-FloatingActionButton fabCarrito;
-Spinner spnFortnite;
+public class Fortnite extends AppCompatActivity {
+    Button btnInicio;
+    Button btnFort;
+    FloatingActionButton fabCarrito;
+    Spinner spnFortnite;
 
+    // Nombre para las SharedPreferences
+    private static final String SHARED_PREFS_KEY = "carrito_items";
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fortnite);
+
         fabCarrito = findViewById(R.id.fabCarrito);
-        btnInicio= findViewById(R.id.btnInicio);
+        btnInicio = findViewById(R.id.btnInicio);
         spnFortnite = findViewById(R.id.spnFortnite);
         btnFort = findViewById(R.id.btnFort);
 
         btnFort.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                switch (spnFortnite.getSelectedItemPosition()) {
+                // Obtener la opción seleccionada en el Spinner
+                int selectedItemPosition = spnFortnite.getSelectedItemPosition();
+
+                // Guardar el elemento seleccionado en las SharedPreferences
+                saveToSharedPreferences(selectedItemPosition);
+
+                // Mostrar un mensaje al usuario
+                switch (selectedItemPosition) {
                     case 0:
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
-
                         break;
                     case 1:
                         Toast.makeText(getApplicationContext(), "Se ha agregado al carrito: 1,000 V-BUCKS ($8.99)", Toast.LENGTH_LONG).show();
@@ -55,7 +67,6 @@ Spinner spnFortnite;
             }
         });
 
-
         btnInicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +74,7 @@ Spinner spnFortnite;
                 startActivity(intent);
             }
         });
+
         fabCarrito.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,9 +82,32 @@ Spinner spnFortnite;
                 startActivity(intent);
             }
         });
-
-
     }
 
+    // Método para guardar elementos en las SharedPreferences
+    private void saveToSharedPreferences(int selectedItemPosition) {
+        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
 
+        Set<String> carritoItems = sharedPreferences.getStringSet("carrito_items", new HashSet<String>());
+
+        // Agregar el nuevo elemento al set
+        switch (selectedItemPosition) {
+            case 1:
+                carritoItems.add("1,000 V-BUCKS ($8.99)");
+                break;
+            case 2:
+                carritoItems.add("2,800 V-BUCKS ($19.99)");
+                break;
+            case 3:
+                carritoItems.add("5,000 V-BUCKS ($31.99)");
+                break;
+            case 4:
+                carritoItems.add("13,500 V-BUCKS ($79.99)");
+                break;
+        }
+
+        editor.putStringSet("carrito_items", carritoItems);
+        editor.apply();
+    }
 }
