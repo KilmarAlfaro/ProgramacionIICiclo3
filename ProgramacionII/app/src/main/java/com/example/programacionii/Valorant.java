@@ -23,7 +23,6 @@ public class Valorant extends AppCompatActivity {
     FloatingActionButton fabCarrito;
     Button btnInicio;
 
-    // Nombre para las SharedPreferences
     private static final String SHARED_PREFS_KEY = "carrito_items";
 
     @Override
@@ -39,13 +38,13 @@ public class Valorant extends AppCompatActivity {
         btnValo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Obtener la opción seleccionada en el Spinner
+
                 int selectedItemPosition = spnValorant.getSelectedItemPosition();
 
-                // Guardar el elemento seleccionado en las SharedPreferences
+
                 saveToSharedPreferences(selectedItemPosition);
 
-                // Mostrar un mensaje al usuario
+
                 switch (selectedItemPosition) {
                     case 0:
                         Toast.makeText(getApplicationContext(), "Por favor seleccione un producto para agregarlo al carrito", Toast.LENGTH_LONG).show();
@@ -89,14 +88,14 @@ public class Valorant extends AppCompatActivity {
         });
     }
 
-    // Método para guardar elementos en las SharedPreferences
+
     private void saveToSharedPreferences(int selectedItemPosition) {
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS_KEY, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
         Set<String> carritoItems = sharedPreferences.getStringSet("carrito_items", new HashSet<String>());
 
-        // Agregar el nuevo elemento al set
+
         switch (selectedItemPosition) {
             case 1:
                 carritoItems.add("500 Valorant Points ($4.99)");
