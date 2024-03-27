@@ -1,5 +1,8 @@
 package com.example.programacionii;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                 double respuesta = 0;
                 spn = findViewById(R.id.spnOpciones);
+                int factorial = 1;
 
                 switch (spn.getSelectedItemPosition()) {
                     case 0:
@@ -61,6 +65,24 @@ public class MainActivity extends AppCompatActivity {
                     case 3:
                         respuesta = num1 / num2;
                         break;
+                    case 4:
+                        respuesta = (num1*num2)/100;
+                        break;
+                    case 5:
+                        respuesta = pow(num1,num2);
+                        break;
+                    case 6:
+                        for (int i=2;i<=num1;i++){
+                            factorial *=i;
+                            respuesta= factorial;
+                        }
+
+                        break;
+                    case 7:
+                        if (num1 >= 0 && num2 > 0) {
+                            respuesta = Math.pow(num1, 1 / num2);
+                            break;
+                        }
                 }
                 tempVal = findViewById(R.id.lblrespuesta);
                 tempVal.setText("Respuesta: " + respuesta);
