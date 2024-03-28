@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,58 +35,42 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup opt;
     Spinner spn;
 
+    TabHost tbh;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn = findViewById(R.id.btnCalcular);
+        tbh = findViewById(R.id.TbhParcial);
+        tbh.setup();
+
+        tbh.addTab(tbh.newTabSpec("AGUA").setContent(R.id.TabTarifaAgua).setIndicator("AGUA", null));
+        tbh.addTab(tbh.newTabSpec("AREA").setContent(R.id.TabConversor).setIndicator("AREA", null));
+
+        btn = findViewById(R.id.BtnTarifaAgua);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                tempVal = findViewById(R.id.txtnum1);
-                double num1 = Double.parseDouble(tempVal.getText().toString());
-                tempVal = findViewById(R.id.txtnum2);
-                double num2 = Double.parseDouble(tempVal.getText().toString());
+            public void onClick(View v) {
+                tempVal = findViewById(R.id.txtCantidadAgua);
+                double mts = Double.parseDouble(tempVal.getText().toString());
+                double tarifa = 0;
 
-                double respuesta = 0;
-                spn = findViewById(R.id.spnOpciones);
-                int factorial = 1;
+                if (mts >= 1 && mts <= 18) {
+                    tarifa = 6;
 
-                switch (spn.getSelectedItemPosition()) {
-                    case 0:
-                        respuesta = num1 + num2;
-                        break;
-                    case 1:
-                        respuesta = num1 - num2;
-                        break;
-                    case 2:
-                        respuesta = num1 * num2;
-                        break;
-                    case 3:
-                        respuesta = num1 / num2;
-                        break;
-                    case 4:
-                        respuesta = (num1*num2)/100;
-                        break;
-                    case 5:
-                        respuesta = pow(num1,num2);
-                        break;
-                    case 6:
-                        for (int i=2;i<=num1;i++){
-                            factorial *=i;
-                            respuesta= factorial;
-                        }
 
-                        break;
-                    case 7:
-                        if (num1 >= 0 && num2 > 0) {
-                            respuesta = Math.pow(num1, 1 / num2);
-                            break;
-                        }
+                } else if (mts >= 19 && mts <= 28) {
+                    tarifa = ((mts - 18) * 0.45) + 6;
+
+
+                } else {
+
+                    tarifa = (((mts - 28) * 0.65) + (28 - 18) * 0.45) + 6;
                 }
-                tempVal = findViewById(R.id.lblrespuesta);
-                tempVal.setText("Respuesta: " + respuesta);
+                Toast.makeText(getApplicationContext(), "Su tarifa de agua es de: $" + tarifa, Toast.LENGTH_SHORT).show();
             }
         });
     }
