@@ -7,13 +7,14 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/lblSensorAcelerometro"
-        android:layout_width="wrap_content"
+        android:id="@+id/lblSensorProximidad"
+        android:text="Sensor de Proximidad: ?"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="20dp"
-        android:text="Sensor Acelerometro: ?"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:textColor="@color/black"/>
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textSize="25dp"/>
 
 </RelativeLayout>
